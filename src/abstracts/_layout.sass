@@ -1,0 +1,61 @@
+.charsheet
+    main,
+    div
+        display: flex
+        font-family: 'Courier New'
+        font-size: 12px
+        padding: 3px
+        border: solid green 1px
+    div.col
+        flex-direction: column
+        width: calc(100% - 6px)
+    div.col-2
+        flex-direction: column
+        width: calc(50% - 6px)
+
+    label
+        font-weight: normal
+
+    main
+        display: grid
+        grid-template-columns: 20% 20% 10% 10% 20% 20%
+        grid-template-rows: 50% 50%
+        grid-template-areas: (
+            "identity identity identity power   power power"
+            "skills   skills   monitor  monitor misc  misc "
+        )
+        margin-top: -20px
+        margin-left: -8px
+        width: 100%
+        min-width: 845px
+        min-height: 450px
+        flex-direction: row
+        flex-wrap: wrap
+        background-size: cover
+        background-repeat: no-repeat
+        background-origin: border-box
+        border: solid red 1px
+
+    #identity
+        grid-area: identity
+    #power
+        grid-area: power
+    #skills
+        grid-area: skills
+    #monitor
+        grid-area: monitor
+    #misc
+        grid-area: misc
+
+input, textarea
+    font-family: $font_cursive
+    font-style: italic
+    font-size: 1em
+    border: 0
+
+textarea
+    @include textareaLined(22px, 20px)
+    width: 95%
+
+input[type=text]
+    border-bottom: solid lightgray 1px

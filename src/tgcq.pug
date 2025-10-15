@@ -1,0 +1,28 @@
+include components/components
+
+main
+    #identity.col.postit
+        +textLabelled('nom', 'Nom:', 'nom')
+        +textLabelled('occupation', 'Occupation:', 'occupation')
+        +textareaLabelled('famille', 'Liens & famille:', 'famille')
+        +textareaLabelled('ambition', 'Ambition personnelle:', 'ambition')
+    #power.col.postit
+        +textLabelled('powa', 'Pouvoir ou zone d’influence:', 'powa')
+        +textareaLabelled('excentricite', 'Excentricités:', 'excentricite')
+        +textareaLabelled('crise', 'Crise:', 'crise')
+    #skills
+        ul
+            li SCREWED
+            li POWoir
+            li MUScle
+            li NEUrones
+            li APLomb
+            li DEBrouillardise
+    #monitor
+        ul
+            li SANté
+            li ÉQUilibre
+
+    #misc.col
+        +textareaLabelled('equipement', 'Équipement:', 'equipement')
+        +textareaLabelled('avantage', 'Avantages & séquelles:', 'avantage')

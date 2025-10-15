@@ -1,0 +1,139 @@
+.charsheet main,
+.charsheet div {
+  display: flex;
+  font-family: "Courier New";
+  font-size: 12px;
+  padding: 3px;
+  border: solid green 1px;
+}
+.charsheet div.col {
+  flex-direction: column;
+  width: calc(100% - 6px);
+}
+.charsheet div.col-2 {
+  flex-direction: column;
+  width: calc(50% - 6px);
+}
+.charsheet label {
+  font-weight: normal;
+}
+.charsheet main {
+  display: grid;
+  grid-template-columns: 20% 20% 10% 10% 20% 20%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "identity identity identity power   power power" "skills   skills   monitor  monitor misc  misc ";
+  margin-top: -20px;
+  margin-left: -8px;
+  width: 100%;
+  min-width: 845px;
+  min-height: 450px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  border: solid red 1px;
+}
+.charsheet #identity {
+  grid-area: identity;
+}
+.charsheet #power {
+  grid-area: power;
+}
+.charsheet #skills {
+  grid-area: skills;
+}
+.charsheet #monitor {
+  grid-area: monitor;
+}
+.charsheet #misc {
+  grid-area: misc;
+}
+
+input, textarea {
+  font-family: "Patrick Hand";
+  font-style: italic;
+  font-size: 1em;
+  border: 0;
+}
+
+textarea {
+  line-height: 22px;
+  padding-block: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: repeating-linear-gradient(to bottom, transparent 0 20px, lightgray 20px 21px, transparent 21px 22px) 50% 0/calc(100% - 44px) 100% no-repeat;
+  width: 95%;
+}
+
+input[type=text] {
+  border-bottom: solid lightgray 1px;
+}
+
+.charsheet button.roll[type=roll],
+.charsheet button.roll[type=action] {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  margin-top: 3px;
+  box-shadow: none;
+  padding: 2px 3px 0 3px;
+}
+
+.charsheet button.roll[type=roll]::before,
+.charsheet button.roll[type=action]::before {
+  font-family: "dicefontd20";
+  content: "0";
+}
+
+.charsheet button.roll[type=roll].small,
+.charsheet button.roll[type=action].small {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.charsheet button.roll[type=roll]:hover, .charsheet button.roll[type=roll]:hover::before,
+.charsheet button.roll[type=action]:hover,
+.charsheet button.roll[type=action]:hover::before {
+  font-weight: bold;
+}
+
+.charsheet button.roll[type=roll].white::before,
+.charsheet button.roll[type=action].white::before {
+  color: white;
+}
+
+#famille,
+#ambition {
+  height: 75px;
+  width: 95%;
+}
+
+#excentricite,
+#crise {
+  height: 90px;
+}
+
+#equipement {
+  height: 120px;
+}
+
+#avantage {
+  line-height: 22px;
+  padding-block: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: repeating-linear-gradient(to bottom, transparent 0 20px, lightgray 20px 21px, transparent 21px 22px) 50% 0/calc(100% - 44px) 100% no-repeat;
+  height: 45px;
+}
+
+/*# sourceMappingURL=tgcq.css.map */
