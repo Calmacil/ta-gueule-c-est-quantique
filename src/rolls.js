@@ -1,4 +1,4 @@
-const THE_ROLL = "&{template:tgcq} {{carac=_CARAC_}} {{roll=[[_ROLL_]]}} {{chaos=[[0]]}}"
+const THE_ROLL = "&{template:tgcq} {{name=_NAME_}} {{carac=_CARAC_}} {{roll=[[_ROLL_]]}} {{chaos=[[0]]}}"
 
 let doRoll = async (caracName, params={}) => {
     params = {
@@ -15,6 +15,7 @@ let doRoll = async (caracName, params={}) => {
     rollDice += `+${params.aie}+${params.deboussole}`
 
     let rollString = THE_ROLL
+        .replace('_NAME_', params.charName)
         .replace('_CARAC_', caracName)
         .replace('_ROLL_', rollDice)
 
@@ -40,7 +41,7 @@ let doRoll = async (caracName, params={}) => {
 on('clicked:muscle clicked:neurone clicked:aplomb clicked:debrouille clicked:pouvoir', ev => {
     let carac = ev.htmlAttributes.value
     let attrName = ev.htmlAttributes.name.substr(4)
-    let attributes = [attrName, 'd12', 'aie']
+    let attributes = ['character_name', attrName, 'd12', 'aie']
 
     if (carac === 'Pouvoir') {
         attributes.push('deboussole')
@@ -51,6 +52,7 @@ on('clicked:muscle clicked:neurone clicked:aplomb clicked:debrouille clicked:pou
     let caracValue = vals[attrName]
 
         let params = {
+            charName: vals.character_name,
             caracValue: parseInt(caracValue)||0,
             isBonusChecked: parseInt(vals.d12)||0,
             aie: parseInt(vals.aie)||0,

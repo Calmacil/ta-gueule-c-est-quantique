@@ -359,4 +359,25 @@ input[type=text] {
   color: #cd241d;
 }
 
+.sheet-rolltemplate-tgcq {
+  width: 100%;
+  background: conic-gradient(from 0deg at center, #f7bbbb, #c2d5f5, #b1f1dc, #d6c8fb, #f7bbbb) white;
+  border: solid gray 1px;
+  text-align: center;
+}
+.sheet-rolltemplate-tgcq > h1 {
+  font-size: 16px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.5);
+}
+.sheet-rolltemplate-tgcq > .sheet-rollBody, .sheet-rolltemplate-tgcq > .sheet-chaos {
+  padding: 5px;
+}
+.sheet-rolltemplate-tgcq .inlinerollresult,
+.sheet-rolltemplate-tgcq .inlinerollresult.fullcrit,
+.sheet-rolltemplate-tgcq .inlinerollresult.fullfail {
+  border: none;
+  background: none;
+}
+
 /*# sourceMappingURL=tgcq.css.map */
