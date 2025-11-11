@@ -1,11 +1,11 @@
 .charsheet
+    background: conic-gradient(from 0deg at center, #ef4444, #3b82f6, #10b981, #8b5cf6, #ef4444)
     main,
     div
         display: flex
-        font-family: 'Courier New'
+        font-family: $font_typist
         font-size: 12px
         padding: 3px
-        border: solid green 1px
     div.col
         flex-direction: column
         width: calc(100% - 6px)
@@ -18,23 +18,24 @@
 
     main
         display: grid
-        grid-template-columns: 20% 20% 10% 10% 20% 20%
-        grid-template-rows: 50% 50%
+        grid-template-columns: 19% 19% 9% 9% 19% 19%
+        grid-template-rows: 48% 48%
         grid-template-areas: (
             "identity identity identity power   power power"
             "skills   skills   monitor  monitor misc  misc "
         )
+        gap: 10px
+        row-gap: 10px
         margin-top: -20px
         margin-left: -8px
         width: 100%
-        min-width: 845px
-        min-height: 450px
+        min-width: 825px
+        min-height: 430px
         flex-direction: row
         flex-wrap: wrap
         background-size: cover
         background-repeat: no-repeat
         background-origin: border-box
-        border: solid red 1px
 
     #identity
         grid-area: identity
@@ -42,8 +43,22 @@
         grid-area: power
     #skills
         grid-area: skills
+        display: grid
+        grid-template-columns: 31% 31% 31%
+        grid-template-rows: 42% 42% 10%
+        grid-template-areas: (
+            "screwed muscle swiftness"
+            "power   neuron boldness"
+            "bonus   bonus  bonus"
+        )
+        &> label
+            grid-area: bonus
     #monitor
         grid-area: monitor
+        flex-direction: column
+        &> label:nth-of-type(1),
+        &> label:nth-of-type(3)
+            margin-bottom: 2px
     #misc
         grid-area: misc
 

@@ -93,7 +93,7 @@ mixin actButton(name, value='')
 mixin cbButton(name, label, value='')
   label
     input(name=`attr_${name}` value=value type='checkbox')
-    span(title=label)
+    span(title=label)!= label
 
 //- @pugdoc
   name: rdButton

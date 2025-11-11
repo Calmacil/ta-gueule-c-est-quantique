@@ -4,7 +4,7 @@
     "description": "Fiche pour le jeu Ta gueule c’est quantique.",
     "scripts": {
         "start": "npm-run-all --parallel compile:sass compile:pug",
-        "compile:sass": "sass ./src/tgcq.sass ./tgcq.css -w --no-charset --style=expanded",
+        "compile:sass": "sass ./src/tgcq.sass ./tgcq.css -w --no-charset --style=expanded --silence-deprecation=import",
         "compile:pug": "pug ./src/tgcq.pug -o ./ -w -d html -P"
     },
     "dependencies": {
